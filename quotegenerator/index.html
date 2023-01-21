@@ -1,67 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quote Generator</title>
-    <style>
-      * {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .container {
-        width: 100%;
-        height: 30vh;
-        animation: fadeIn 0.5s;
-      }
-      .container h1{
-        width: 100%;
-        height: 50%;
-        font-size: 1.5rem;
-        animation: fadeIn 0.5s;
-      }
-      .animate {
-        animation: fadeIn 0.5s;
-      }
-      #textField {
-        animation: fadeIn 0.5s;
-      }
-      @keyframes fadeIn {
-        0% {opacity: 0;}
-        100% {opacity: 1;}
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="animate"><span id="textField"></span></h1>
-      <h4 class="animate"><span id="authorField"></span></h4>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/icon.jpg" type="image/jpg">
+    <title>KUOWTA</title>
+</head>
+<body>
+    <div class="root">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="quote-container" id="quote-container">
+                <h1>"<span id="textField"></span>" - <span id="authorField"></span></h1>
+            </div>
+            <div class="action-buttons-container">
+                <button class="buttons submit">Submit Quote</button>
+                <button class="buttons randomize" onclick="myFunc()">Randomize</button>
+            </div>
+            <div class="footer">
+                <p>Made by Luis Lloyd "Loki" Tolentino</p>
+            </div>
+        </div>
     </div>
-    <button onclick="myFunc()">random</button>
 
-    <script>
-      let jsn = {}
-      fetch("./quotes.json")
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function(obj) {
-          jsn = obj;
-          var x = Math.floor(Math.random() * jsn.quotes.length);
-          document.getElementById('textField').innerHTML = jsn.quotes[x].quote;
-          document.getElementById('authorField').innerHTML = jsn.quotes[x].author;
-        })
-        .catch(function (error) {
-          console.log(error);
-        })
-
-      function myFunc() {
-        var x = Math.floor(Math.random() * jsn.quotes.length);
-        console.log(jsn.quotes[x]);
-        document.getElementById('textField').innerHTML = jsn.quotes[x].quote;
-        document.getElementById('authorField').innerHTML = jsn.quotes[x].author;
-      }
-
-    </script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>

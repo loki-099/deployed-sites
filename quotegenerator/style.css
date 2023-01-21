@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.root {
+    background-image: linear-gradient(to bottom right, rgb(255, 68, 146), rgb(196, 74, 253));
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    width: 75%;
+    height: 100vh;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.logo {
+    text-align: center;
+}
+.logo img {
+    width: 190px;
+    height: 70px;
+    text-align: center;
+}
+
+.quote-container {
+    width: 100%;
+    height: 300px;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.quote-container h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+}
+#textField {
+    display: inline;
+    width: 100%;
+}
+
+.action-buttons-container {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    width: 250px;
+    padding: 10px;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    border: none;
+    border-radius: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-weight: 600;
+}   
+.submit {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: rgba(221, 221, 221, 1)
+}
+.footer p {
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width:600px) {
+    .container {
+        width: 100%;
+    }
+    .quote-container {
+        width: 100%;
+    }
+    .action-buttons-container {
+        flex-direction: column;
+    }
+    .buttons {
+        font-size: 0.9rem;
+    }
+    .randomize {
+        margin-top: 15px;
+    }
+    #textfield {
+        font-size: 0.9rem;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0px;
+    }
+    .footer p {
+        font-size: 0.7rem;
+    }
+}
