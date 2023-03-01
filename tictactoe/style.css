@@ -72,8 +72,11 @@
 
 @media screen and (max-width: 500px) {
     .main-container {
-        width: 480px;
-        height: 480px;
+        width: 420px;
+        height: 420px;
+    }
+    .buttons {
+        font-size: 3.5rem;
     }
 }
 
