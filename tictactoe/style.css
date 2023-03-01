@@ -30,7 +30,6 @@
     width: 33.3%;
     height: 95%;
     font-size: 4rem;
-    transition: all 0.6s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,13 +69,23 @@
     visibility: visible;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     .main-container {
-        width: 420px;
-        height: 420px;
+        width: 300px;
+        height: 300px;
     }
     .buttons {
-        font-size: 3.5rem;
+        font-size: 3.1rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .main-container {
+        width: 280px;
+        height: 280px;
+    }
+    .buttons {
+        font-size: 3rem;
     }
 }
 
