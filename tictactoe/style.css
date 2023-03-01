@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.root {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #dfac84, #16c4b6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    width: 500px;
+    height: 500px;
+}
+
+.rows {
+    width: 100%;
+    height: 33.3%;
+    display: flex;
+}
+
+.buttons {
+    width: 33.3%;
+    height: 95%;
+    font-size: 4rem;
+    transition: all 0.6s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Shantell Sans', cursive;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reset {
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'Shantell Sans', cursive;
+    border-radius: 4px;
+    visibility: visible;
+    cursor: pointer;
+}
+
+.message-container {
+    margin-bottom: 30px;
+}
+.message {
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: 'Shantell Sans', cursive;
+    visibility: visible;
+}
+
+@media screen and (max-width: 500px) {
+    .main-container {
+        width: 480px;
+        height: 480px;
+    }
+}
+
