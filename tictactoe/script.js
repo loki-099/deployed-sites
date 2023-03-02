@@ -48,7 +48,6 @@ function makeArr() {
     }
 
     checkWin(points)
-    checkDraw()
 }
 
 function checkWin(points) {
@@ -69,11 +68,13 @@ function checkWin(points) {
     if (match.includes(true)) {
         console.log("WINNER")
         win()
+        return 
     }
     else {
         match = []
     }
-
+	
+	checkDraw()
     console.log(points)
         
 }
@@ -111,4 +112,3 @@ function checkDraw() {
     }
 }
 startGame()
-
