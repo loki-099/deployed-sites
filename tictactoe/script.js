@@ -35,7 +35,6 @@ function myFunc(e) {
     const cell = e.target
     cell.innerHTML = currentPlayer
     makeArr()
-    checkDraw()
     currentPlayer = currentPlayer == "X" ? "O":"X"
 }
 
@@ -49,6 +48,7 @@ function makeArr() {
     }
 
     checkWin(points)
+    checkDraw()
 }
 
 function checkWin(points) {
