@@ -14,10 +14,92 @@
     align-items: center;
     justify-content: center;
 }
+.root-menu {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #dfac84, #16c4b6);
+}
 
+.back-wrapper {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    animation: transitionIn 0.7s;
+}
+.back-button {
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    width: 100px;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 4px;
+}
+.back-button p {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Shantell Sans', cursive;
+    font-size: 1rem;
+}
+
+
+.main-page-container {
+    width: 50%;
+    height: 60vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 300px;
+    animation: transitionIn 1s;
+}
+
+.header-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.header-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Shantell Sans', cursive;
+    font-size: 2.2rem;
+}
+
+.menu-section {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.menu-buttons {
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    width: 60%;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 15px 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+}
+.menu-buttons p {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Shantell Sans', cursive;
+    font-size: 1.4rem;
+}
+
+
+.footer-section {
+    width: 100%;
+}
+
+
+/** TABLE **/
 .main-container {
     width: 500px;
     height: 500px;
+    animation: transitionIn 0.7s;
 }
 
 .rows {
@@ -61,12 +143,17 @@
 
 .message-container {
     margin-bottom: 30px;
+    animation: transitionIn 0.75s;
 }
 .message {
     font-size: 1.8rem;
     font-weight: 500;
     font-family: 'Shantell Sans', cursive;
     visibility: visible;
+}
+
+.buttons:hover, .back-button:hover, .menu-buttons:hover, .reset:hover {
+    background: rgba(255,255,255,0.8);
 }
 
 @media screen and (max-width: 500px) {
@@ -77,6 +164,24 @@
     .buttons {
         font-size: 3.1rem;
     }
+    .back-button {
+        width: 70px;
+        padding: 10px;
+    }
+    .back-button p {
+        font-size: 0.8rem;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Shantell Sans', cursive;
+    }
+    .header-section h1 {
+        font-size: 1.7rem;
+    }
+    .menu-buttons {
+        width: 80%;
+    }
+    .menu-buttons p {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 300px) {
@@ -86,6 +191,24 @@
     }
     .buttons {
         font-size: 3rem;
+    }
+    .back-button {
+        width: 60px;
+        padding: 10px;
+    }
+    .back-button p {
+        font-size: 0.4rem;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Shantell Sans', cursive;
+    }
+    .header-section h1 {
+        font-size: 1.8rem;
+    }
+    .menu-buttons {
+        width: 90%;
+    }
+    .menu-buttons p {
+        font-size: 0.4rem;
     }
 }
 
