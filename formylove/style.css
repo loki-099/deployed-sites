@@ -21,7 +21,7 @@
     justify-content: center;
 }
 
-.text-container {
+.text-main-container {
     height: 80%;
     width: 60%;
     display: flex;
@@ -64,7 +64,7 @@ a {
     justify-content: center;
 }
 .image-container {
-    width: 60%;
+    width: 55%;
     height: auto;
     margin: auto;
 }
@@ -75,35 +75,33 @@ a {
 
 @media all and (max-width:600px) {
     .main-container {
-        display: block;
+        display: flex;
+        flex-direction: column;
         width: 90vw;
         position: relative;
     }
 
-    .text-container {
+    .text-main-container {
         height: auto;
         width: 90%;
         margin: auto;
-        padding-top: 3rem;
     }
     .text-container .heading {
-        font-size: 4vw;
+        font-size: 3.7vw;
     }
     .text-container .paragraph {
-        font-size: 4.2vw;
+        font-size: 4vw;
         width: 100%;
     }
 
     .image-main-container {
         width: 100%;
         height: auto;
-        position: absolute;
-        bottom: 0;
     }
 
     .button {
-        font-size: 4vw;
-        width: 42vw;
-        height: 5vh;
+        font-size: 3.4vw;
+        width: 38vw;
+        height: 4.5vh;
     }
 }
