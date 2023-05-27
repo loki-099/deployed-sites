@@ -54,6 +54,23 @@ a {
     justify-content: center;
     padding: 0.2rem;
     border-radius: 30px;
+    transition: all ease 0.5s;
+}
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #FF5C58;
+    animation: beat 1.3s infinite ease;
+}
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .image-main-container {

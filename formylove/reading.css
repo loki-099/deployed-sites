@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #101010;
+}
+
+.active {
+    background-color: #FE8F8F;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    color: #ffedd3;
+}
+
+.root {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(196deg, #ffedd3 0%, #fcd2d1 100%);
+    color: #101010;
+}
+
+.main-container {
+    width: 80vw;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADINGS */
+
+.heading-main-container {
+    width: 100%;
+    height: 15vh;
+    border-bottom: 3px solid #FF5C58;
+    position: relative;
+}
+.heading-container {
+    width: 100%;
+    /* background-color: aliceblue; */
+    position: absolute;
+    bottom: 0;
+    padding: 0.6rem 0;
+}
+.heading-container .links {
+    display: inline-block;
+    margin-right: 1.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* PAPERS */
+
+.papers-main-container {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.papers-container {
+    width: 100%;
+    height: 95%;
+    /* background-color: aliceblue; */
+    overflow-y: scroll;
+}
+.papers-container {
+    --mask: linear-gradient(to bottom, 
+        rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 93%, 
+        rgba(0,0,0, 0) 100%, rgba(0,0,0, 0) 0
+    ) 100% 50% / 100% 100% repeat-x;
+    
+    -webkit-mask: var(--mask); 
+    mask: var(--mask);
+    
+  }
+
+.papers-container::-webkit-scrollbar {
+    display: none;
+  }
+
+.papers {
+    width: 100%;
+    background-color: #FE8F8F;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.papers .content-main-container {
+    padding: 0.4rem 0;
+    color: #ffedd3;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+}
+.papers .content-main-container .title {
+    border-bottom: 3px solid #FF5C58;
+    padding: 8px 0;
+    margin: auto;
+    margin-bottom: 8px;
+    width: 80%;
+}
+.papers .content-main-container .poem-content{
+    padding: 0.4rem 0;
+    display: none;
+    margin-bottom: 10px;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.displayBlock {
+    display: block;
+}
+
+@media all and (max-width:600px) {
+    .main-container {
+        width: 90%;
+    }
+
+    .heading-main-container {
+        height: 10vh;
+    }
+
+    .papers .content-main-container {
+        font-size: 0.8em;
+    }
+
+    .heading-container .links {
+        margin-right: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
