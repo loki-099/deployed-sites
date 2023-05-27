@@ -90,6 +90,15 @@ a {
     height: auto;
 }
 
+.dedication {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 0.75rem;
+    margin-bottom: 7px;
+}
+
 @media all and (max-width:600px) {
     .main-container {
         display: flex;
@@ -114,11 +123,17 @@ a {
     .image-main-container {
         width: 100%;
         height: auto;
+        margin-bottom: 25px;
     }
 
     .button {
         font-size: 3.4vw;
         width: 38vw;
         height: 4.5vh;
+    }
+
+    .dedication {
+        font-size: 10px;
+        margin-bottom: 7px;
     }
 }
