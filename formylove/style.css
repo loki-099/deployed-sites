@@ -10,6 +10,16 @@
     height: 100vh;
     background: linear-gradient(196deg, #ffedd3 0%, #fcd2d1 100%);
     color: #101010;
+    position: relative;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .main-container {
@@ -19,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: transitionIn 1.5s;
 }
 
 .text-main-container {
@@ -134,6 +145,6 @@ a {
 
     .dedication {
         font-size: 10px;
-        margin-bottom: 7px;
+        margin-bottom: 2px;
     }
 }

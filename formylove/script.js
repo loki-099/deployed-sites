@@ -4,8 +4,7 @@ document.addEventListener('click', function(e) {
 
     if (target.classList.contains('title') || target.classList.contains('content-main-container')) {
         var cont = target.parentNode.querySelector('#poem-content');
-        checkDisplay(cont)
-    }
+        checkDisplay(cont)    }
     else if (target.classList.contains('para')) {
         console.log(target.parentNode)
         target.parentNode.style.display = 'none';
