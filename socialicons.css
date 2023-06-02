@@ -1,0 +1,41 @@
+.links-container a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.fa {
+}
+
+.links-container a:hover {
+    box-shadow: 0 0 20px 8px #058C42;
+}
+
+@media all and (max-width:760px) {
+    .links-container a {
+        font-size: 5vw;
+    }
+}
+
+@media all and (max-width:500px) {
+    .links-container a {
+        font-size: 8vw;
+    }
+}
+
+@media all and (max-width:400px) {
+    .links-container a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
