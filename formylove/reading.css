@@ -140,6 +140,16 @@ a {
     display: block;
 }
 
+.para-letters {
+    text-align: left;
+}
+.letter-content img{
+    width: 40%;
+    height: auto;
+    border: dashed 2px #FF5C58;
+    margin-bottom: 15px;
+}
+
 @media all and (max-width:600px) {
     .main-container {
         width: 90%;
@@ -156,5 +166,9 @@ a {
     .heading-container .links {
         margin-right: 0.8rem;
         font-size: 0.9rem;
+    }
+    .letter-content img {
+        width: 80%;
+        margin-bottom: 10px;
     }
 }
