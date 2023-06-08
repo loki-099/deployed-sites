@@ -46,6 +46,36 @@
 .carousel-main-container {
     width: 100%;
     height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-container {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-container .project{
+    margin: 0 25px;
+}
+.carousel-container .project a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    padding: 15px;
+    border-bottom: #000 2px solid;
+    border-left: #000 2px solid;
+    border-radius: 15%;
+}
+.carousel-container .project a:hover {
+    color: #058C42;
+    transition: all ease-in-out .5s;
+    border-bottom: #058C42 2px solid;
+    border-left: #058C42 2px solid;
+    border-radius: 15%;
 }
 
 @media all and (max-width:760px) {
@@ -55,6 +85,43 @@
 
     .links-container {
         gap: 5vw;
+    }
+
+    .links-main-container {
+        height: 25%;
+    }
+    .logo-main-container {
+        height: 25%;
+    }
+    .carousel-main-container {
+        height: 50%;
+    }
+    .carousel-container {
+        flex-direction: column;
+    }
+    .carousel-container .project{
+        margin: 25px 0px;
+    }
+    .carousel-container .project a {
+        font-size: 4.5vw;
+        padding: 10px;
+        border-top: #000 2px solid;
+        border-right: #000 2px solid;
+        border-bottom: #058C42 2px solid;
+        border-left: #058C42 2px solid;
+        border-radius: 15%;
+    }
+    .carousel-container .project a:hover {
+        border-top: #058C42 2px solid;
+        border-right: #058C42 2px solid;
+        border-bottom: #058C42 2px solid;
+        border-left: #058C42 2px solid;
+    }
+}
+
+@media all and (max-width:420px) {
+    .carousel-container .project a {
+        font-size: 5vw;
     }
 }
 
