@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+        <div class="formula-pane">
+            <div class="formula-card">
+                <h3 class="center">Trapezoid</h3>
+                <div class="formula-form">
+                    <div class="block">
+                        <p class="label">Base</p>
+                        <div class="input-inline">
+                            <input class="input" type="text" id="base-a"><p id="length" class="length-unit">cm</p>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <p class="label">Base</p>
+                        <div class="input-inline">
+                            <input class="input" type="text" id="base-b"><p id="length" class="length-unit">cm</p>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <p class="label">Side</p>
+                        <div class="input-inline">
+                            <input class="input" type="text" id="side-a"><p id="length" class="length-unit">cm</p>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <p class="label">Side</p>
+                        <div class="input-inline">
+                            <input class="input" type="text" id="side-b"><p id="length" class="length-unit">cm</p>
+                        </div>
+                    </div>
+                    <div id="revealAns">
+                        <h3>P = <span id="answerValue"></span> <span class="length-unit" id="length">cm</span></h3>
+                    </div>
+                </div>
+                <div class="length-sel-container">
+                    <label for="length-sel">Length Unit:</label>
+                    <select name="length-unit" id="length-sel" onchange="unit()">
+                        <option value="centimeter">cm</option>
+                        <option value="millimeter">mm</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <a href="/perimeter.html"><div class="back-button"><span class="material-symbols-outlined">arrow_back</span></div></a>
+                    <button class="eval-button" onclick="evalFormula()">Evaluate</button>
+                </div>
+            </div> 
+        </div>
+        <div class="shape-pane">
+        </div>
+    </div>
+
+    <script>
+        function unit(){
+            var d = document.getElementById('length-sel');
+            var displaytext = d.options[d.selectedIndex].text; 
+            var elms = document.querySelectorAll("[id='length']");
+ 
+            for (var i = 0; i < elms.length; i++) {
+            elms[i].innerHTML=displaytext; 
+             }
+            }
+
+        function evalFormula(){
+            var baseA = document.getElementById('base-a').value;
+            var baseB = document.getElementById('base-b').value;
+            var sideA = document.getElementById('side-a').value;
+            var sideB = document.getElementById('side-b').value;
+
+            var answer = +baseA+ + +baseB+ + +sideA+ + +sideB ; 
+
+            document.getElementById('answerValue').innerHTML = answer;
+            document.getElementById('revealAns').style.display = 'block';
+        
+        }
+    </script>
+</body>
+</html>
