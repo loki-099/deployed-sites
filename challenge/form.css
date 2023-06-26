@@ -1,0 +1,66 @@
+.main-input-area {
+    width: 100%;
+    height: auto;
+    color: hsl(278, 68%, 11%);
+    margin-bottom: 1.2rem;
+}
+
+.labels {
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    display: block;
+}
+
+.input-main {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    outline: none;
+    border: 1px solid #DFDEE0;
+    color: hsl(278, 68%, 11%);
+    margin-bottom: 5px;
+}
+.input-main::placeholder {
+    color: hsl(270, 3%, 87%);
+}
+.input-main:focus {
+    background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.error {
+    font-size: 0.7rem;
+    color: hsl(0, 100%, 66%);
+    letter-spacing: normal;
+}
+
+.confirm-button {
+    width: 100%;
+    padding: 15px 0;
+    outline: none;
+    background-color: hsl(278, 68%, 11%);
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-top: 0.1rem;
+}
+
+@media all and (max-width:420px) {
+    .main-input-area {
+        margin-bottom: 1rem;
+    }
+    .main-input-area .labels {
+        font-size: 0.6rem;
+        margin-bottom: 5px;
+    }
+    .input-main {
+        margin-bottom: 2px;
+    }
+}
