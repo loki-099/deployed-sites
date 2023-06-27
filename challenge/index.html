@@ -33,26 +33,26 @@
         <div class="form-container">
            <div class="main-input-area">
                 <label for="card-name-input" class="block labels">Cardholder Name</label>
-                <input type="text" id="card-name-input" class="input-main inputs" maxlength="25" placeholder="e.g. Ian Muico"> 
+                <input type="text" id="card-name-input" class="input-main inputs" maxlength="25" placeholder="e.g. Ian Muico" onfocus="removeError(event)"> 
                 <p class="error"></p>
            </div> 
            <div class="main-input-area">
                 <label for="card-number-input" class="block labels">Card Number</label>
-                <input type="text" id="card-number-input" class="input-main inputs" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+                <input type="text" id="card-number-input" class="input-main inputs" maxlength="19" placeholder="e.g. 1234 5678 9123 0000" onfocus="removeError(event)">
                 <p class="error"></p>
            </div>
            <div class="main-input-area third">
                 <div class="date-input-container">
                     <p class="labels">Exp. Date (MM/YY)</p>
                     <div class="third-date-input">
-                        <input type="text" id="card-date-mm-input" class="tdi-input inputs" maxlength="2" placeholder="MM">
-                        <input type="text" id="card-date-yy-input" class="tdi-input inputs" maxlength="2" placeholder="YY">
+                        <input type="text" id="card-date-mm-input" class="tdi-input inputs" maxlength="2" placeholder="MM" onfocus="removeError(event)">
+                        <input type="text" id="card-date-yy-input" class="tdi-input inputs" maxlength="2" placeholder="YY" onfocus="removeError(event)">
                     </div>
                     <p class="error"></p>
                 </div>
                 <div class="cvc-input-container">
                     <label for="card-name-input" class="block labels">CVC</label>
-                    <input type="text" id="card-cvc-input" class="input-main inputs" maxlength="3" placeholder="e.g. 123">
+                    <input type="text" id="card-cvc-input" class="input-main inputs" maxlength="3" placeholder="e.g. 123" onfocus="removeError(event)">
                     <p class="error"></p>
                 </div>
            </div>
