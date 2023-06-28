@@ -18,7 +18,6 @@ function checkInputAreas() {
     let inputsArr = Array.from(inputs)
     let anyEmpty = false
     inputsArr.forEach(inputArea => {
-        console.log(inputArea)
         inputArea.classList.remove('input-error')
         if (inputArea.value == "") {
             inputArea.classList.add('input-error')
@@ -63,15 +62,11 @@ function displayError() {
                     let child = cvcContainer.childNodes[5]
                     child.innerHTML = ""
                     if (cvcInput.classList.contains('input-error')) {
-                        console.log("HERE BUG!!!")
                         displayErrorMessage(child)
                     }
                 }
             }
         }
-
-        console.log(parents.childNodes)
-        console.log("HERE >>>", parents.childNodes)
     }) 
 }
 
@@ -94,7 +89,6 @@ function removeInputAreas() {
 
 function removeError(event) {
     let targetEvent = event.target
-    console.log(event.target.classList.contains('inputs'))
     if (targetEvent.classList.contains('input-error')) {
         targetEvent.classList.remove('input-error')
     }

@@ -10,7 +10,21 @@
     height: 100vh;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 500;
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5rem;
+    width: 80%;
+    height: auto;
+    position: absolute;
+    left: 5.5%;
 }
 
 .color-pane {
@@ -29,10 +43,11 @@
 .card-container {
     width: 541px;
     height: 527px;
-    position: absolute;
+    position: relative;
+    /* position: absolute;
     top: 50%;
-    left: 8%;
-    transform: translateY(-50%);
+    left: 8%; */
+    
 }
 .card {
     border-radius: 5px;
@@ -112,12 +127,11 @@
 }
 
 .form-container {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    left: 832px;
+    left: 832px; */
     width: 381px;
     height: auto;
-    transform: translateY(-50%);
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: 2px;
 }
@@ -191,6 +205,15 @@
 
 
 @media all and (max-width:420px) {
+    .root {
+        position: relative;
+    }
+    .center {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        left: auto;
+    }
     .color-pane {
         background: url('https://loki-099.github.io/challenge/img/bg-main-mobile.png');
         background-repeat: no-repeat;
@@ -200,6 +223,7 @@
         height: 240px;
     }
     .card-container {
+        position: absolute;
         width: 343px;
         height: 251px;
         top: 150px;
@@ -207,6 +231,7 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
+        transform: translateY(-50%);
     }
     .card-front {
         width: 286px;
@@ -245,6 +270,7 @@
     }
 
     .form-container {
+        position: relative;
         width: 327px;
         height: 328px;
         top: 480px;
@@ -252,5 +278,6 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
+        transform: translateY(-50%);
     }
 }

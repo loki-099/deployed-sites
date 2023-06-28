@@ -13,55 +13,57 @@
 <body>
     <div class="root">
         <div class="color-pane"></div>
-        <div class="card-container">
-            <div class="card-front card">
-                <div class="front-text">
-                    <img src="https://loki-099.github.io/challenge/img/card-logo.svg" alt="card-logo">
-                    <div class="info-text">
-                        <p class="card-number" id="card-number">0000 0000 0000 0000</p>
-                        <p class="card-name" id="card-name">Ian Muico</p>
-                        <p class="card-date" id="card-date"><span id="card-date-mm">00</span>/<span id="card-date-yy">00</span></p>
+        <div class="center">
+            <div class="card-container">
+                <div class="card-front card">
+                    <div class="front-text">
+                        <img src="https://loki-099.github.io/challenge/img/card-logo.svg" alt="card-logo">
+                        <div class="info-text">
+                            <p class="card-number" id="card-number">0000 0000 0000 0000</p>
+                            <p class="card-name" id="card-name">Ian Muico</p>
+                            <p class="card-date" id="card-date"><span id="card-date-mm">00</span>/<span id="card-date-yy">00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back card">
+                    <div class="back-text">
+                        <p class="card-cvc" id="card-cvc">123</p>
                     </div>
                 </div>
             </div>
-            <div class="card-back card">
-                <div class="back-text">
-                    <p class="card-cvc" id="card-cvc">123</p>
-                </div>
-            </div>
-        </div>
-        <div class="form-container">
-           <div class="main-input-area">
-                <label for="card-name-input" class="block labels">Cardholder Name</label>
-                <input type="text" id="card-name-input" class="input-main inputs" maxlength="25" placeholder="e.g. Ian Muico" onfocus="removeError(event)"> 
-                <p class="error"></p>
-           </div> 
-           <div class="main-input-area">
-                <label for="card-number-input" class="block labels">Card Number</label>
-                <input type="text" id="card-number-input" class="input-main inputs" maxlength="19" placeholder="e.g. 1234 5678 9123 0000" onfocus="removeError(event)">
-                <p class="error"></p>
-           </div>
-           <div class="main-input-area third">
-                <div class="date-input-container">
-                    <p class="labels">Exp. Date (MM/YY)</p>
-                    <div class="third-date-input">
-                        <input type="text" id="card-date-mm-input" class="tdi-input inputs" maxlength="2" placeholder="MM" onfocus="removeError(event)">
-                        <input type="text" id="card-date-yy-input" class="tdi-input inputs" maxlength="2" placeholder="YY" onfocus="removeError(event)">
+            <div class="form-container">
+               <div class="main-input-area">
+                    <label for="card-name-input" class="block labels">Cardholder Name</label>
+                    <input type="text" id="card-name-input" class="input-main inputs" maxlength="25" placeholder="e.g. Ian Muico" onfocus="removeError(event)"> 
+                    <p class="error"></p>
+               </div> 
+               <div class="main-input-area">
+                    <label for="card-number-input" class="block labels">Card Number</label>
+                    <input type="text" id="card-number-input" class="input-main inputs" maxlength="19" placeholder="e.g. 1234 5678 9123 0000" onfocus="removeError(event)">
+                    <p class="error"></p>
+               </div>
+               <div class="main-input-area third">
+                    <div class="date-input-container">
+                        <p class="labels">Exp. Date (MM/YY)</p>
+                        <div class="third-date-input">
+                            <input type="text" id="card-date-mm-input" class="tdi-input inputs" maxlength="2" placeholder="MM" onfocus="removeError(event)">
+                            <input type="text" id="card-date-yy-input" class="tdi-input inputs" maxlength="2" placeholder="YY" onfocus="removeError(event)">
+                        </div>
+                        <p class="error"></p>
                     </div>
-                    <p class="error"></p>
-                </div>
-                <div class="cvc-input-container">
-                    <label for="card-name-input" class="block labels">CVC</label>
-                    <input type="text" id="card-cvc-input" class="input-main inputs" maxlength="3" placeholder="e.g. 123" onfocus="removeError(event)">
-                    <p class="error"></p>
-                </div>
-           </div>
-           <div class="complete-container" id="complete-container">
-                <img src="https://loki-099.github.io/challenge/img/icon-complete.svg" alt="complete">
-                <p class="heading">Thank You!</p>
-                <p class="para">We've added your card details</p>
-           </div>
-           <button class="confirm-button" id="button">Confirm</button>
+                    <div class="cvc-input-container">
+                        <label for="card-name-input" class="block labels">CVC</label>
+                        <input type="text" id="card-cvc-input" class="input-main inputs" maxlength="3" placeholder="e.g. 123" onfocus="removeError(event)">
+                        <p class="error"></p>
+                    </div>
+               </div>
+               <div class="complete-container" id="complete-container">
+                    <img src="https://loki-099.github.io/challenge/img/icon-complete.svg" alt="complete">
+                    <p class="heading">Thank You!</p>
+                    <p class="para">We've added your card details</p>
+               </div>
+               <button class="confirm-button" id="button">Confirm</button>
+            </div>
         </div>
     </div>
 
