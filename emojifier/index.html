@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Emojifier</title>
+</head>
+<body>
+    <div class="root">
+        <div class="header"><h1>emojifier</h1></div>
+        <div class="main-container">
+            <div class="inputs-container">
+                <div class="upper-inputs">
+                    <input type="text" class="inputs" id="text-input" placeholder="Text Here">
+                    <input type="text" class="inputs" id="emoji-input" placeholder="Emoji Here" value="🤸">
+                </div>
+                <textarea readonly="true" name="" id="result" rows="10" placeholder="Results here"></textarea>
+                <button id="button" onclick="copy()">Copy</button>
+                <div id="copied">Copy done</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

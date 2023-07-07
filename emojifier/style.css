@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --padLR: 10%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    padding: 10px var(--padLR);
+    background-color: #9A1663;
+}
+.header h1 {
+    color: #fff;
+    font-weight: 700;
+}
+
+.main-container {
+    width: 100%;
+    height: auto;
+    padding: 0 var(--padLR);
+    padding-top: 180px;
+    text-align: center;
+}
+
+.inputs-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.upper-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputs {
+    display: inline;
+    outline: none;
+    border: #FF97C1 2px solid;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 1.5rem;
+    color: #4d062f;
+}
+.inputs:focus {
+    border-color: #9A1663;
+}
+
+#text-input {
+    width: 73%;
+}
+#emoji-input {
+    width: 23%;
+}
+#result {
+    width: 100%;
+    margin-top: 30px;
+    resize: vertical;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    outline: none;
+    border: #FF97C1 2px solid;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+#button {
+    display: none;
+    background-color: #9A1663;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#button:hover {
+    background-color: #881458;
+}
+#copied {
+    margin-top: 12px;
+    opacity: 0;
+    transition: 1s;
+    font-size: 1rem;
+}
+
+@media all and (min-width:370px) and (max-width:460px) {
+    .header {
+        padding: 5px 5%;
+        font-size: 0.8rem;
+    }
+    .main-container {
+        padding-top: 50px;
+    }
+    .inputs-container {
+        width: 100%;
+    }
+    .inputs {
+        font-size: 1.2rem;
+    }
+    #result {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+    #button {
+        font-size: 1.2rem;
+    }
+    #copied {
+        font-size: 0.8rem;
+    }
+}
