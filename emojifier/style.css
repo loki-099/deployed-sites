@@ -102,7 +102,7 @@ body {
     font-size: 1rem;
 }
 
-@media all and (min-width:370px) and (max-width:460px) {
+@media all and (max-width:470px) {
     .header {
         padding: 5px 5%;
         font-size: 0.8rem;
