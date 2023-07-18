@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/output.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="overflow-x-hidden">
+    <div class="w-full h-screen bg-[#1b0404] relative overflow-hidden">
+        <div class="bg-[#a51414] w-[275px] h-[224px] blur-[200px] absolute left-[353px] sm:left-[90%] top-[352px]"></div>
+        <div class="w-[90%] mx-auto bg-[#882727]/30 flex items-center justify-between px-4 py-2 rounded-[120px] relative top-4 shadow-md">
+            <span class="w-8 text-[#C11414]">
+                 <img src="src/img/rose.svg">
+           </span>
+            <h1 class="text-[#C11414] text-lg uppercase font-bold px-3 py-1 bg-[#100000] rounded-3xl shadow-md font-[Inria]">Home</h1>
+            <span class="text-3xl text-[#C11414] flex items-center cursor-pointer" id="menu">
+                <ion-icon name="menu" id="icon"></ion-icon>
+            </span>
+        </div>
+        <div class="bg-[#882727]/30 rounded-2xl w-[90%] sm:w-64 pt-4 pb-10 absolute right-[5%] top-20 opacity-0 ease-out duration-300 backdrop-blur-lg overflow-hidden shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] border-b-[1px] border-[#C11414]" id="dropdown">
+            <ul class="flex flex-col justify-center items-center text-center sm:space-y-2">
+                <li class="text-[#C11414] px-3 py-1 inline-block uppercase font-bold text-lg text-center hover:bg-[#100000] rounded-3xl ease-out duration-300 font-[Inria]"><a href="">Home</a></li>
+                <li class="text-[#C11414] px-3 py-1 inline-block uppercase font-bold text-lg text-center hover:bg-[#100000] rounded-3xl ease-out duration-300 font-[Inria]"><a href="">Poems</a></li>
+                <li class="text-[#C11414] px-3 py-1 inline-block uppercase font-bold text-lg text-center hover:bg-[#100000] rounded-3xl ease-out duration-300 font-[Inria]"><a href="">Letters</a></li>
+                <p class="text-xs text-[#FFD3D3] bg-[#100000] inline-block py-2 absolute bottom-0 w-[110%]">Dedicated to my love, Abbah Marie Y. Agero</p>
+            </ul>
+        </div>
+        <div class="w-full h-full flex flex-col items-center justify-between md:flex-row md:px-[10%] md:gap-16">
+            <div class="h-full flex items-center px-[10%] max-w-6xl md:px-0 md:pb-12">
+                <div class="font-[Inria] text-base text-left text-[#FFD3D3] tracking-wide">
+                    <h1 class="mb-3">To my <span class="text-[#D62B2B]">LOVE</span>,</h1>
+                    <p class="text-justify">Hindi sapat ang mga salita upang ipaliwanag ang aking nararamdamang pag-ibig sa iyo. Walang katumbas na kaligayahan ang hatid mo simula nang dumating ka sa buhay ko. Ang makilala ka ang pinaka-magandang nangyari sa buhay ko. Nawa'y lagi mong tatandaan sa lahat ng oras na mahal kita at wala ng iba.</p>
+                </div>
+            </div>
+            <div class="w-48 md:w-[1100px] md:h-full mx-auto mix-blend-screen relative">
+                <img class="md:absolute bottom-0" src="src/img/flowerrose.jpg">
+            </div>
+        </div>
+    </div>
+    
+    <script src="src/script.js"></script>
+</body>
+</html>
