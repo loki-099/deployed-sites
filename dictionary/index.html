@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="font-sans" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&family=Inter:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet">
+    <title>Dictionary</title>
+  <link rel="stylesheet" href="./assets/index-dc859100.css">
+</head>
+<body class="transition-all duration-150 bg-light-100 dark:bg-dark-400">
+    <div class="w-[87.2%] max-w-[737px] mx-auto mt-6 md:mt-10">
+
+        <!-- HEADINGS -->
+        <div class="w-full flex items-center justify-between">
+            <span>
+                <img class="w-7" src="./assets/logo-1ad79f67.svg">
+            </span>
+            <div class="flex items-center justify-between space-x-4">
+                <div class="w-[98px] md:w-[120px] flex items-center justify-between relative">
+                    <label class="w-full flex items-center justify-between">
+                        <input type="checkbox" class="opacity-0 w-0 h-0 peer/sel" onchange="displaySel()">
+                        <p class="text-bodySm md:text-bodyMd font-bold text-dark-200 cursor-pointer dark:text-white" for="sel" id="dispFont">Sans Serif</p>
+                        <img class="cursor-pointer" src="./assets/icon-arrow-down-f0eae304.svg">
+                    </label>
+                    <div class="transition-all ease-in duration-150 w-[130px] md:w-[183px] bg-light-100 dark:bg-dark-400 absolute top-10 right-0 px-4 py-4 shadow-base dark:shadow-dark rounded-[16px] z-10 hidden  opacity-0" id="sel">
+                        <ul class="space-y-4 text-bodySm md:text-bodyMd font-bold dark:text-light-100">
+                            <li class="font-sans hover:text-acc-1 cursor-pointer" onclick="changeFont(this)" id="sans">Sans Serif</li>
+                            <li class="font-serif hover:text-acc-1 cursor-pointer" onclick="changeFont(this)" id="serif">Serif</li>
+                            <li class="font-mono hover:text-acc-1 cursor-pointer" onclick="changeFont(this)" id="mono">Mono</li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="w-[1px] text-transparent h-full border-r border-[#979797]">.</span>
+                <div class="w-[72px] md:w-[80px] flex items-center justify-between">
+                    <label class="w-10 h-5 inline-block relative">
+                        <input type="checkbox" class="opacity-0 w-0 h-0 peer/idol" onchange="dark()">
+                        <span class="transition-all absolute cursor-pointer top-0 left-0 bottom-0 right-0 bg-[#ccc] rounded-3xl peer-checked/idol:bg-acc-1 before:absolute before:h-[14px] before:w-[14px] before:bg-white before:bottom-[3px] before:left-[3px] before:rounded-3xl before:peer-checked/idol:translate-x-5 before:transition-all duration-500"></span>
+                    </label>
+                    <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-[#838383] dark:stroke-acc-1" width="22" height="22" viewBox="0 0 22 22"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z"/></svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEARCH BAR -->
+        <label class="relative block mt-6 md:mt-9">
+            <input type="text" class="w-full transition-all duration-150 bg-light-200 dark:bg-dark-300 font-bold text-[16px] text-dark-300 dark:text-light-100 py-3 rounded-2xl px-6 placeholder:text-dark-200/25 dark:placeholder:text-light-100/25 outline-none border border-transparent focus:border-acc-1" placeholder="Search for any word..." id="searchArea">
+            <span class="absolute right-0 inset-y-0 pr-6 flex items-center">
+                <img src="./assets/icon-search-b502bcbe.svg" class="cursor-pointer" onclick="search()">
+            </span>
+            <p class="absolute left-0 -bottom-5 text-[14px] text-acc-2" id="error"></p>
+        </label>
+
+        <!-- DEFINITION SECTION -->
+        <section class="w-full mt-4 hidden" id="definition-section">
+            <div class="flex items-center justify-between">
+                <div class="flex flex-col            ">
+                    <h2 class="text-[32px] font-bold text-dark-200 dark:text-light-100" id="word">keyboard</h2>
+                    <p class="text-bodyMd text-acc-1" id="pronunciation">/ki-bord/</p>
+                </div>
+                <span>
+                    <img src="./assets/icon-play-1508c789.svg" class="cursor-pointer w-12" onclick="playAudio()">
+                </span>
+            </div>
+
+            <!-- MEANINGS SECTION -->
+            <div class="mt-6">
+                <div class="flex">
+                    <p class="text-headMd text-dark-200 font-bold italic dark:text-light-100" id="meaning-0">noun</p>
+                    <hr class="flex-grow ml-4 mt-4 h-px border-0 bg-light-300 dark:bg-dark-100">
+                </div>
+
+                <div class="mt-6" id="meaning-section-0">
+                    <h2 class="text-[16px] text-light-400 mb-2">Meaning</h2>
+                    <div class="mb-4">
+                        <ul class="list-disc list-inside text-justify marker:text-acc-1 space-y-3" id="list-of-definitions-0">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OPTIONALS -->
+            <div class="mt-6 hidden" id="part-1">
+                <div class="flex">
+                    <p class="text-headMd text-dark-200 font-bold italic dark:text-light-100" id="meaning-1">verb</p>
+                    <hr class="flex-grow ml-4 mt-4 h-px border-0 bg-light-300 dark:bg-dark-100">
+                </div>
+
+                <div class="mt-6" id="meaning-section-1">
+                    <h2 class="text-[16px] text-light-400 mb-2">Meaning</h2>
+                    <div class="mb-4">
+                        <ul class="list-disc list-inside text-justify marker:text-acc-1 mb-3 space-y-3" id="list-of-definitions-1">
+                        </ul>
+                        <p class="text-justify pl-6 text-[16px] text-light-400" id="example">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deserunt vel illum nam ex impedit.</p>
+                    </div>
+                </div>                
+            </div>
+
+            <hr class="border-0 h-px bg-light-300 dark:bg-dark-100 mt-10">
+            <div class="mt-6 pb-8">
+                <p class="text-bodySm text-light-400 underline underline-offset-2">Source</p>
+                <a href="#" class="text-dark-200 underline underline-offset-2 inline dark:text-light-100" id="source" target="_blank"><span id="source-link">https://wiki.com/word/link</span><img src="./assets/icon-new-window-70a67aa8.svg" class="inline ml-1"></a>
+                
+            </div>
+        </section>
+
+        <section class="mt-14 hidden" id="error-word">
+            <div class="w-full text-center space-y-5">
+                <h2 class="font-bold text-headSm">No Definitions Found</h2>
+                <p class="text-light-400 text-bodyMd">Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at later time or head to the web instead.</p>
+            </div>
+        </section>
+
+    </div>    
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
