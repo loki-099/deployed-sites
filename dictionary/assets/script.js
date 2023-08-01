@@ -203,7 +203,7 @@ function changeFont(e) {
     let font = e.id
     let isDark = false
     isDark = html.classList.contains('dark')
-
+// bug
     html.classList = ''
     html.classList.add(`font-${font}`)
     isDark ? html.classList.add('dark') : []
