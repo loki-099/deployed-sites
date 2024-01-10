@@ -9,8 +9,9 @@
 <body>
   <main>
     <div class="main">
-      <div class="main-container">
-        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+      <!--* HERO -->
+      <div class="main-container" id="main-container">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" class="img-mobile">
         <div class="information-container">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -24,11 +25,24 @@
               <label for="email">Email address</label>
               <input type="text" id="email" placeholder="email@company.com">
             </div>
-            <div class="button">Subscribe to monthly newsletter</div>
+            <div class="button" id="button">Subscribe to monthly newsletter</div>
           </div>
         </div>
+        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" class="img-desktop">
+      </div>
+
+      <!--* DONE -->
+      <div class="main-container-done" id="main-container-done">
+        <div class="information-done">
+          <img src="./assets/images/icon-success.svg">
+          <h1>Thanks for subscribing!</h1>
+          <p>A confirmation email has been sent to <span class="email-done" id="email-done"></span>. Please open it and click the button inside to confirm your subscription</p>
+        </div>
+        <div class="button-done" id="button-done">Dismiss message</div>
       </div>
     </div>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
