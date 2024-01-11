@@ -14,6 +14,7 @@
   --neutral-charcoal-grey: hsl(235, 18%, 26%);
   --neutral-grey: hsl(231, 7%, 60%);
   --primary-tomato: hsl(4, 100%, 67%);
+  --error-bg: hsl(3, 100%, 96%);
 }
 * {
   padding: 0;
@@ -61,6 +62,14 @@
   gap: 1.25rem;
   margin-bottom: 2rem;
 }
+.label {
+  display: flex;
+  justify-content: space-between;
+}
+.error-message {
+  color: var(--primary-tomato);
+  display: none;
+}
 
 .actions .email label {
   font-weight: bold;
@@ -83,7 +92,7 @@
 }
 .actions .email input:focus {
   outline: none;
-  border-color: var(--neutral-dark-slate-grey);
+  border-color: var(--neutral-dark-slate-grey) !important;
 }
 .actions .button {
   color: white;
